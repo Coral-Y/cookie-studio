@@ -1,10 +1,103 @@
 <!DOCTYPE html>
-<head>
-    <title>曲奇工作室</title>
-</head>
 <html>
+    <head>
+        <title>曲奇工作室</title>
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                display: flex;
+                margin: 0;
+                padding: 0;
+                background-color: #232946;
+            }
+            /* 左侧导航栏样式 */
+            .sidebar {
+                width: 200px;
+                padding: 15px 20px;
+                margin: 82px 20px 10px;
+                position: fixed;
+                top: 0;
+                left: 0;
+                border-radius: 3px;
+            }
+            .sidebar a {
+                display: block;
+                margin: 15px 0;
+                text-decoration: none;
+                color: #fff;
+                font-size: 16px;
+            }
+            .sidebar a:hover {
+                color: #d4939d;
+            }
+            /* 右侧内容区域样式 */
+            .right {
+                flex: 1;
+                margin: 10px 20px 10px 270px;
+
+                .title {
+                    font-size: 32px;
+                    font-weight: bold;
+                    color: #fff;
+                }
+            
+                #about-us {
+                    padding: 5px 20px;
+                    margin-top: 30px;
+                    border-radius: 3px;
+                    background-color: #FFF;
+                }
+                
+                #project-intro {
+                    padding: 5px 20px;
+                    margin-top: 30px;
+                    border-radius: 3px;
+                    background-color: #FFF;
+
+                    span {
+                        color: #d4939d;
+                        font-weight: bold;
+                    }
+                }
+            }
+
+            /* 标题样式 */
+            h1 {
+                font-size: 24px;
+                color: #333;
+            }
+        </style>
+    </head>
     <body>
-        <h1>关于我们</h1>
-        <h1>项目介绍</h1>
+        <!-- 左侧导航栏 -->
+        <div class="sidebar">
+            <a href="#about-us">关于我们</a>
+            <a href="#project-intro">项目介绍</a>
+        </div>
+    
+        <!-- 右侧内容区域 -->
+        <div class="right">
+            <div class="title">
+                <span>曲奇工作室</span>
+                <img src="./img/cookie.png" width="24px" height="24px">
+            </div>
+            <div id="about-us">
+                <h1>关于我们</h1>
+                <p>这里是关于我们的详细介绍...</p>
+            </div>
+            
+            <div id="project-intro">
+                <h1>项目介绍</h1>
+                <p>"食"App 是一款以健康饮食为核心的个人规划类App</p>
+                <ul>
+                    <li>你是否也在烦恼每到饭点却不知道吃什么</li>
+                    <li>你是否想拥有一本专属自己的食谱</li>
+                    <li>你是否想记录自己的饮食日常</li>
+                    <li>你是否想了解更多健康饮食的小知识</li>
+                </ul>
+                <p>快来试试"食"App 吧！</p>
+                <p>我们提供了<span>每日饮食规划</span>和<span>食谱管理</span>功能，更多功能正在开发中，敬请期待哦~</p>
+            </div>
+        </div>
     </body>
 </html>
